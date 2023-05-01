@@ -1,0 +1,37 @@
+@font-face{
+    font-family: "Avenir-Regular";
+    src: url('../../assets/Font/AvenirNextLTPro-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: "Avenir-Demi";
+    src: url('../../assets/Font/AvenirNextLTPro-Demi.otf');
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: "Avenir-Bold";
+    src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+    font-weight: 700;
+}
+
+/*Check if declaring fonts should be in mixins*/
+@mixin mobile {
+    @media screen and (min-width: $mobile-breakpoint) {
+      @content;
+    }
+  }
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }
+  

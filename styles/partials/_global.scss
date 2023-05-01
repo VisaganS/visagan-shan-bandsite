@@ -1,0 +1,103 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Avenir-Regular';
+
+    ul{
+        list-style: none;
+    }
+}
+
+.navbar{
+    background-color: $Bandsite-black;
+    //padding: 0.25rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        flex-direction:row;
+        padding:0rem 2rem;
+      }
+
+    &__logo{
+        display:inline-block;
+        display:flex;
+        align-items:center;
+        padding-top: 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding:0;
+          }
+    }
+
+    &__logo-link{
+        text-decoration: none;
+    }
+    
+    &__logo-image{
+        height:1.5rem;
+    }
+
+    &__menu{
+        
+        justify-content: space-around;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @media screen and (min-width: 768px) {
+            padding:1rem 2rem;
+            justify-content: left;
+          }
+    }
+
+    &__options{
+        font-family: 'Avenir-Regular';
+            font-weight: 400;
+            font-size: 1.3rem;
+            display:inline-block;
+            width:50%;
+            text-align:center;
+            @media screen and (min-width: 768px) {
+                width:auto;
+              }
+
+            &--active{
+                border-bottom: solid .25rem white;
+                @media screen and (min-width: 768px) {
+                    border-bottom:none;
+                    width:auto;
+                  }
+            }
+    }
+    &__button{
+        display:inline-block;
+        color: $Mercury;
+        text-decoration: none;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        padding: 1rem;
+        &--active{
+            color: white;
+            font-family:'Avenir-Demi';
+           
+            @media screen and (min-width: 768px) {
+                text-decoration: underline;
+                text-decoration-color: white;
+                text-underline-offset: 2.05rem;
+                text-decoration-thickness: 0.3rem;
+              }
+        }
+
+    }
+}

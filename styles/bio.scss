@@ -1,0 +1,273 @@
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.banner{
+    background: url('../assets/Images/hero-bio.jpg');
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        height:65vh;
+      }
+
+    &__overlay{
+        position:absolute;
+        height:100%;
+        width:100%;
+        background-color:$Bandsite-black;
+        opacity: 50%;
+        top: 0;
+    }
+
+    &__text{
+        display: flex;
+        padding:1rem;
+        align-items: center;
+        height: 100%;
+        color: white;
+        font-size: 1.5625rem;
+        font-family: 'Avenir-Demi';
+        z-index: 10;
+        position:relative;
+
+        @media screen and (min-width: 768px) {
+            font-size: 64px;
+            padding:0rem 2rem;
+          }
+    }
+}
+
+.content-container{
+    padding:0rem 1rem;
+
+    @media screen and (min-width: 768px) {
+        padding:0rem 2rem;
+      }
+
+    &--gray{
+        @extend .content-container;
+        background-color: $Alabaster;
+    }
+}
+
+.about{
+    padding:1rem 0;
+    display:flex;
+    flex-direction: column;
+
+    &__inner-container{
+        @media screen and (min-width: 768px) {
+           padding: 0 3.5rem;
+           }
+    }
+
+    &__image{
+       width:100%;
+       height:100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    & img{
+        width:100%;
+
+        @media screen and (min-width: 768px) {
+           height: 40vh;
+           object-fit: cover;
+          }
+    }
+
+    &__quote{
+        padding: 0.5rem 0rem;
+        font-family: 'Avenir-Demi';
+        font-size:0.9rem;
+
+        @media screen and (min-width: 768px) {
+            font-size:1.35rem;
+            padding:1.5rem 0rem;
+           }
+    }
+    &__quote-author{
+        @extend .about__quote;
+
+        @media screen and (min-width: 768px) {
+            font-size:1rem;
+            font-family:'Avenir-Demi';
+            padding: 1rem 0;
+           }
+    }
+
+}
+
+.title{
+        font-family:'Avenir-Demi';
+        padding: 0.5rem 0;
+        font-size:1.3rem;
+
+        @media screen and (min-width: 768px) {
+            font-size:2.4rem;
+            padding: 1rem 0;
+          }
+
+        &--white{
+            @extend .title;
+            color:white;
+        }
+}
+
+.bio{
+
+    &__subheading{
+    padding:0.5rem 0;
+    font-size: 0.7rem;
+    font-family: 'Avenir-Regular';
+    }
+    &__text{
+        display:flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+           flex-direction: row;
+           justify-content: space-between;
+           }
+    }
+    &__paragraph{
+    padding:0.5rem 0;
+    @media screen and (min-width: 768px) {
+            font-size:0.9rem;
+            line-height: 1.3rem;
+            width:48%;
+        }
+    }
+}
+
+.gallery{
+    padding:1rem 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 2rem 0;
+     }
+
+    &__images{
+        display:flex;
+        flex-direction:column;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap:wrap;
+            width:100%;
+         }
+    }
+
+    &__image{
+        padding:0.5rem 0rem;
+
+        @media screen and (min-width: 768px) {
+           display:flex;
+        }
+    }
+    &__image img{
+        height: 20vh;
+        width:100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:center;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            width:28vw;
+            height:15vh;
+         }
+    }
+}
+
+.footer{
+    background-color:$Bandsite-black;
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        padding:1rem 2rem;
+     }
+    &__social{
+        display:flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+         }
+    }
+    &__icons{
+        display:flex;
+        width:35%;
+    justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+        align-items: center;
+        width:15%;
+        margin: 0 2rem;
+     }
+    }
+
+    &__contact-list{
+        color:white;
+        padding:0.5rem 0;
+        display:flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+         }
+    }
+    
+    &__contact-item{
+        display:flex;
+        flex-direction:column;
+        height: 10rem;
+        justify-content: space-around;
+    }
+    
+    &__contact-name{
+        font-family: 'Avenir-Bold';
+    }
+    &__trademark{
+        color:white;
+        padding:0.5rem 0;
+        display:flex;
+        flex-direction: column;
+        font-size:0.7rem;
+        @media screen and (min-width: 768px) {
+            font-size: 0.9rem;
+            padding:2rem 0;
+         }
+        
+    }
+    &__logo{
+        padding: 0.5rem 0rem;
+        padding-top: 2rem;
+
+        @media screen and (min-width: 768px) {
+            display:none;
+        }
+        
+        &--top{
+            display:none;
+            @media screen and (min-width: 768px) {
+                display:flex;
+               position:relative;
+               left:12.5rem;
+            }
+        }
+    }
+    &__logo img{
+        height:1.6rem;
+    }
+}
