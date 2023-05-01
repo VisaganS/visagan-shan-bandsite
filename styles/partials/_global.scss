@@ -83,7 +83,17 @@ body{
                     width:auto;
                   }
             }
+
+            &:hover{
+                border-bottom: solid .25rem white;
+                color:white;
+                @media screen and (min-width: 768px) {
+                    border-bottom:none;
+                    width:auto;
+                  }
+            }
     }
+
     &__button{
         display:inline-block;
         color: $Mercury;
@@ -92,6 +102,18 @@ body{
         line-height: 1.25rem;
         padding: 1rem;
         &--active{
+            color: white;
+            font-family:'Avenir-Demi';
+           
+            @media screen and (min-width: 768px) {
+                text-decoration: underline;
+                text-decoration-color: white;
+                text-underline-offset: 2.05rem;
+                text-decoration-thickness: 0.3rem;
+              }
+        }
+
+        &:hover{
             color: white;
             font-family:'Avenir-Demi';
            
