@@ -2,52 +2,7 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
-.banner{
-    background: url('../assets/Images/hero-bio.jpg');
-    height: 25vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-    position: relative;
 
-    @media screen and (min-width: 768px) {
-        height:65vh;
-      }
-
-      @media screen and (min-width: 1280px) {
-        height:90vh;
-      }  
-
-    &__overlay{
-        position:absolute;
-        height:100%;
-        width:100%;
-        background-color:$Bandsite-black;
-        opacity: 50%;
-        top: 0;
-    }
-
-    &__text{
-        display: flex;
-        padding:1rem;
-        align-items: center;
-        height: 100%;
-        color: white;
-        font-size: 1.5625rem;
-        font-family: 'Avenir-Demi';
-        z-index: 10;
-        position:relative;
-
-        @media screen and (min-width: 768px) {
-            font-size: 64px;
-            padding:0rem 2rem;
-          }
-
-          @media screen and (min-width: 1280px) {
-            padding:0rem 8.5rem;
-          }  
-    }
-}
 
 .content-container{
     padding:0rem 1rem;
@@ -119,22 +74,6 @@
            }
     }
 
-}
-
-.title{
-        font-family:'Avenir-Demi';
-        padding: 0.5rem 0;
-        font-size:1.3rem;
-
-        @media screen and (min-width: 768px) {
-            font-size:2.4rem;
-            padding: 1rem 0;
-          }
-
-        &--white{
-            @extend .title;
-            color:white;
-        }
 }
 
 .bio{
@@ -211,109 +150,5 @@
             width:25vw;
             height:22vh;
          }
-    }
-}
-
-.footer{
-    background-color:$Bandsite-black;
-    padding:1rem;
-    display:flex;
-    flex-direction: column;
-
-    @media screen and (min-width: 768px) {
-        padding:1rem 2rem;
-     }
-    @media screen and (min-width: 1280px) {
-        padding: 2rem 8.5rem;
-     }
-
-    &__social{
-        display:flex;
-        flex-direction: column;
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
-            justify-content: space-between;
-         }
-    }
-
-    &__heading{
-        display:flex;
-        flex-direction: column;
-
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
-            width:70%;
-         }
-    }
-    
-    &__icons{
-        display:flex;
-        width:35%;
-    justify-content: space-between;
-
-    @media screen and (min-width: 768px) {
-        align-items: center;
-        width:20%;
-        margin: 0 2rem;
-     }
-    }
-
-    &__contact-list{
-        color:white;
-        padding:0.5rem 0;
-        display:flex;
-        flex-direction: column;
-        font-size: 0.9rem;
-
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
-            justify-content: space-between;
-         }
-    }
-    
-    &__contact-item{
-        display:flex;
-        flex-direction:column;
-        height: 10rem;
-        justify-content: space-around;
-    }
-    
-    &__contact-info{
-        font-family: 'Avenir-Regular';
-
-        &--bold{
-            font-family:'Avenir-Demi';
-        }
-    }
-    &__trademark{
-        color:white;
-        padding:0.5rem 0;
-        display:flex;
-        flex-direction: column;
-        font-size:0.7rem;
-        @media screen and (min-width: 768px) {
-            font-size: 0.9rem;
-            padding:2rem 0;
-         }
-        
-    }
-    &__logo{
-        padding: 0.5rem 0rem;
-        padding-top: 2rem;
-
-        @media screen and (min-width: 768px) {
-            display:none;
-        }
-        
-        &--top{
-            display:none;
-            @media screen and (min-width: 768px) {
-                display:flex;
-               position:relative;
-            }
-        }
-    }
-    &__logo img{
-        height:1.6rem;
     }
 }
