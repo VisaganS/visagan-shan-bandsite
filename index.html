@@ -11,7 +11,7 @@
     <header>
       <nav class="navbar">
         <div class="navbar__logo">
-          <a href="./index.html" class="navbar__logo-link"><img class="navbar__logo-image" src="./assets/Logo/Logo-bandsite.svg"/></a>
+          <a href="./index.html" class="navbar__logo-link"><img class="navbar__logo-image" src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo"/></a>
         </div>
         <ul class="navbar__menu">
           <li class="navbar__options navbar__options--active">
@@ -47,7 +47,7 @@
         </div>
 
       <div class="bio">
-        <div class="bio__subheading"><h2>The Bees Knees</h2></div>
+        <div class="bio__subheading">The Bees Knees</div>
         <div class="bio__text">
           <div class="bio__paragraph">
             The Bees Knees is a pop rock band originating from San Francisco,
@@ -94,6 +94,31 @@
       </div>
       </div>
     </section>
+
+    <section class="content-container">
+      <div class="comments">
+        <div class="title">Join the Conversation</div>
+        <div class="comments__page">
+        <div class="comments__create">
+          <div class="comments__images"><img src="./assets/Images/Mohan-muruge.jpg" alt="profile-pic"/></div>
+          <div class="comments__form">
+            <form class="form-inputs">
+              <div class="form-inputs__item">
+              <div class="form-inputs__label"> <label for="name">NAME</label></div>
+              <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-inputs__item">
+              <div class="form-inputs__label"> <label for="comment">COMMENT</label></div>
+              <textarea id="comment" name="comment" placeholder="Add a new comment"></textarea><br>
+              <button type="submit" class="button">COMMENT</button>
+            </div>
+            </form>
+          </div>
+        </div>
+        <div class="comments__display"></div>
+      </div>
+        </div>
+    </section>
   </main>
 
     <footer>
@@ -107,7 +132,7 @@
             <a target="_blank" href="https://www.twitter.com/"><img src="./assets/Icons/Icon-twitter.svg" alt="twitter"/></a>
           </div>
         </div>
-          <div class="footer__logo--top"><img src="./assets/Logo/Logo-bandsite.svg"/></div>
+          <div class="footer__logo--top"><img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo"/></div>
         </div>
 
         <div class="footer__contact-list">
@@ -127,9 +152,10 @@
             <div class="footer__contact-info">cwhyte@archentertainment.com</div>
           </div>
         </div>
-        <div class="footer__logo"><img src="./assets/Logo/Logo-bandsite.svg"/></div>
+        <div class="footer__logo"><img src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo"/></div>
         <div class="footer__trademark">Copyright The Bees Knees © 2021 All Rights Reserved</div>
       </div>
     </footer>
   </body>
+  <script src="./scripts/index-page.js"></script>
 </html>

@@ -1,5 +1,6 @@
 @use './mixins' as *;
 @use './variables' as *;
+@use 'typography' as *;
 
 *{
     box-sizing: border-box;
@@ -8,7 +9,8 @@
 }
 
 body{
-    font-family: 'Avenir-Regular';
+    font-family: Avenir, sans-serif;
+    font-weight:400;
 
     ul{
         list-style: none;
@@ -66,7 +68,6 @@ body{
     }
 
     &__options{
-        font-family: 'Avenir-Regular';
             font-weight: 400;
             font-size: 1.3rem;
             display:inline-block;
@@ -103,7 +104,7 @@ body{
         padding: 1rem;
         &--active{
             color: white;
-            font-family:'Avenir-Demi';
+            font-weight: 600;
            
             @media screen and (min-width: 768px) {
                 text-decoration: underline;
@@ -115,7 +116,7 @@ body{
 
         &:hover{
             color: white;
-            font-family:'Avenir-Demi';
+            font-weight: 600;
            
             @media screen and (min-width: 768px) {
                 text-decoration: underline;
@@ -166,7 +167,7 @@ body{
         height: 100%;
         color: white;
         font-size: 1.5625rem;
-        font-family: 'Avenir-Demi';
+        font-weight: 600;
         z-index: 10;
         position:relative;
 
@@ -182,9 +183,9 @@ body{
 }
 
 .title{
-    font-family:'Avenir-Demi';
+    font-weight: 600;
     padding: 0.5rem 0;
-    font-size:1.3rem;
+    font-size:1.5rem;
 
     @media screen and (min-width: 768px) {
         font-size:2.4rem;
@@ -262,10 +263,10 @@ body{
     }
     
     &__contact-info{
-        font-family: 'Avenir-Regular';
+        font-weight: 400;
 
         &--bold{
-            font-family:'Avenir-Demi';
+            font-weight: 600;
         }
     }
     &__trademark{

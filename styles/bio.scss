@@ -1,7 +1,7 @@
 @use './partials/global' as *;
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
-
+@use './partials/typography' as *;
 
 
 .content-container{
@@ -51,17 +51,20 @@
 
     &__quote{
         padding: 0.5rem 0rem;
-        font-family: 'Avenir-Demi';
+        font-weight:600;
         font-size:0.9rem;
+        line-height:1.3rem;
 
         @media screen and (min-width: 768px) {
             font-size:1.35rem;
             padding:1.5rem 0rem;
+            line-height: 1.75rem;
            }
         @media screen and (min-width: 1280px) {
             font-size:1.5rem;
             padding:2rem 0;
             width:80%;
+            line-height: 2rem;
            }  
     }
     &__quote-author{
@@ -69,7 +72,7 @@
 
         @media screen and (min-width: 768px) {
             font-size:1rem;
-            font-family:'Avenir-Demi';
+            font-weight: 600;
             padding: 1rem 0;
            }
     }
@@ -80,12 +83,12 @@
 
     &__subheading{
     padding:0.5rem 0;
-    font-size: 0.7rem;
-    font-family: 'Avenir-Regular';
+    font-size: 1.05rem;
+    font-weight: 600;
 
     @media screen and (min-width: 768px) {
-       font-size:1rem;
-       font-family: 'Avenir-Demi';
+       font-size:1.6rem;
+       font-weight:600;
         }
     }
     &__text{
@@ -134,21 +137,189 @@
         }
     }
     &__image img{
-        height: 20vh;
-        width:100%;
+        height: 10rem;
+        width: 18rem;
         background-size: cover;
         background-repeat: no-repeat;
         background-position:center;
         position: relative;
 
         @media screen and (min-width: 768px) {
-            width:28vw;
-            height:15vh;
+            width: 14rem;
+            height: 7.5rem;
          }
 
          @media screen and (min-width: 1280px) {
-            width:25vw;
-            height:22vh;
+            width: 20.25rem;
+            height: 11rem;
          }
+    }
+}
+
+.comments{
+    padding:0.5rem 0;
+
+    @media screen and (min-width: 768px) {
+        padding:1rem 0;
+     }
+
+    &__page{
+        @media screen and (min-width: 768px) {
+            width:82%;
+            margin: 0 auto;
+         }
+         @media screen and (min-width: 1280px) {
+            width:50%;
+            margin: 0 auto;
+         }
+    }
+    &__create{
+        display:flex;
+        justify-content: space-between;
+    }
+    &__images {
+        margin: 1.25rem 0;
+
+    }
+    &__images img{
+        width: 2.375rem;
+        height: 2.375rem;
+        border-radius:50%;
+        object-fit: cover;
+        @media screen and (min-width: 768px) {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+    }
+    &__form{
+        width:80%;
+
+        @media screen and (min-width: 768px) {
+            width: 90%;
+        }
+        @media screen and (min-width: 1280px) {
+            width:87%;
+         }
+    }
+    &__display{
+        border-top: 0.125rem solid $Mercury;
+    }
+    
+}
+
+.form-inputs{
+
+    &__item{
+        padding:0.5rem 0;
+    }
+
+    &__label{
+        color: $Silver;
+        font-size: 0.7rem;
+        padding-bottom: .25rem;
+    }
+
+    #name{
+        width:100%;
+        border-radius: .25rem;
+    }
+    #comment{
+        width:100%;
+        height: 4rem;
+        padding: .75rem;
+        border-radius: .25rem;
+        @media screen and (min-width: 768px) {
+            padding: 1rem;
+         }
+    }
+    input[type="text"] {
+        border: .0625rem solid $Mercury;
+        padding: .75rem;
+
+        @media screen and (min-width: 768px) {
+            padding: 1rem;
+         }
+      }
+      ::placeholder{
+        font-family: Avenir;
+        color:black;
+      }
+    .button{
+        background-color: $Bandsite-black;
+        color:white;
+        height: 2.5rem;
+        width: 100%;
+        border-radius: .25rem;
+        font-weight:600;
+        margin: 0.5rem 0;
+
+        @media screen and (min-width: 768px) {
+            width:10rem;
+            float:right;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+         }
+    }
+}
+
+.item{
+    display:flex;
+    justify-content: space-between;
+    border-bottom: .0625rem solid $Mercury;
+    padding:1rem 0;
+   
+    &__text{
+        display:flex;
+        flex-direction:column;
+        width:80%;
+        @media screen and (min-width: 768px) {
+            width: 90%;
+         }
+         @media screen and (min-width: 1280px) {
+            width: 87%;
+         }
+    }
+    &__header{
+        display:flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+    &__name{
+        font-weight:600;
+    }
+    &__date{
+        color: $Silver;
+    }
+    &__body{
+        font-size:0.8rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+         }
+    }
+    &__image-container{
+        width:2.375rem;
+        height:2.375rem;
+        border-radius: 50%;
+        background-color: $Mercury;
+
+        @media screen and (min-width: 768px) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    &__image-container img{
+        width:2.375rem;
+        height:2.375rem;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @media screen and (min-width: 768px) {
+            width: 3rem;
+            height: 3rem;
+        }
     }
 }
