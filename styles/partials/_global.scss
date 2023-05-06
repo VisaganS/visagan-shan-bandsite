@@ -198,6 +198,22 @@ body{
     }
 }
 
+.content-container{
+    padding:0rem 1rem;
+
+    @media screen and (min-width: 768px) {
+        padding:0rem 2rem;
+      }
+
+    @media screen and (min-width: 1280px) {
+        padding:0rem 8.5rem;
+      }   
+    &--gray{
+        @extend .content-container;
+        background-color: $Alabaster;
+    }
+}
+
 .footer{
     background-color:$Bandsite-black;
     padding:1rem;
