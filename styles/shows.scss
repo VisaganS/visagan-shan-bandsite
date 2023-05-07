@@ -6,27 +6,82 @@
 .shows{
     padding: 1rem 0rem;
 
+    @media screen and (min-width: 768px) {
+        padding:2rem 0;
+      }
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      padding: 2rem 5rem;
+      justify-content: space-around;
+      }  
+
     &__title{
         padding: 0 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding:0.5rem 2rem;
+          }
     }
     &__display{
         display:flex;
         flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            padding: 0 1rem;
+          }
+        @media screen and (min-width: 1280px) {
+            padding: 2rem 1rem;
+          }  
+    }
+    &__header-top{
+        display:flex;
+        color: $Silver;
+        font-size: 0.7rem;
+        padding:0.5rem 0;
+        display:none;
+        @media screen and (min-width: 768px) {
+            display:flex;
+            justify-content: space-between;
+            width:31.25rem;
+            padding:0 1rem;
+          }
     }
     &__item{
         display:flex;
         flex-direction:column;
         padding: 1rem 1rem;
         border-bottom: .125rem solid $Mercury;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding:1rem;
+            width: 46rem;
+          }
+          &:hover{
+            background-color: $Alabaster;
+          }
     }
     &__heading{
         color: $Silver;
         font-size: 0.7rem;
         padding:0.5rem 0;
+        @media screen and (min-width: 768px) {
+            display:none;
+          }
+        &--top{
+            width:8rem;
+        }
     }
     &__info{
         font-size:0.9rem;
         padding-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding-bottom: 0;
+            width: 8rem;
+          }
         &--bold{
             @extend .shows__info;
             font-weight:600;
@@ -41,5 +96,9 @@
         font-size:1rem;
         border-radius: .25rem;
         padding:0.5rem 0;
+
+        @media screen and (min-width: 768px) {
+            width:11rem;
+          }
     }
 }
