@@ -5,7 +5,7 @@
 
 .shows{
     padding: 1rem 0rem;
-    
+
     &__title{
         padding: 0 1rem;
     }
@@ -22,11 +22,11 @@
     &__heading{
         color: $Silver;
         font-size: 0.7rem;
-        padding:0.25rem 0;
+        padding:0.5rem 0;
     }
     &__info{
         font-size:0.9rem;
-        padding-bottom: 0.5rem;
+        padding-bottom: 1rem;
         &--bold{
             @extend .shows__info;
             font-weight:600;
