@@ -29,13 +29,11 @@ arrComments = [
     }
 ];
 
-//create a function to display comments
 function displayComments(){
 
     let commentsDisplay = document.querySelector('.comments__display');
     commentsDisplay.innerHTML = "";
     
-    //for each element, create a series of divs to display the content
     arrComments.forEach(element =>{
         let itemEl = document.createElement("div");
         itemEl.classList.add('item');
@@ -79,10 +77,8 @@ function displayComments(){
     });
     }
 
- //display the initial comments
  displayComments(); 
 
-//pushes object to array and updates the list of comments when submit is pressed
 const form = document.querySelector('.form-inputs');
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
