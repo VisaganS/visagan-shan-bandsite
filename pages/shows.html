@@ -1,83 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/shows.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Shows Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-          <div class="navbar__logo">
-            <a href="../index.html" class="navbar__logo-link"><img class="navbar__logo-image" src="../assets/Logo/Logo-bandsite.svg"/></a>
-          </div>
-          <ul class="navbar__menu">
-            <li class="navbar__options">
-              <a class="navbar__button" href="../index.html">Biography</a>
-            </li>
-            <li class="navbar__options navbar__options--active">
-              <a class="navbar__button navbar__button--active" href="../pages/shows.html">Shows</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="../index.html" class="navbar__logo-link"
+            ><img
+              class="navbar__logo-image"
+              src="../assets/Logo/Logo-bandsite.svg"
+          /></a>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__options">
+            <a class="navbar__button" href="../index.html">Biography</a>
+          </li>
+          <li class="navbar__options navbar__options--active">
+            <a
+              class="navbar__button navbar__button--active"
+              href="../pages/shows.html"
+              >Shows</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
       <div class="banner banner--shows">
         <!-- font color being dulled by overlay-->
         <div class="banner__overlay"></div>
         <div class="banner__content">
-        <div class="banner__text-container">
-        <h1 class="banner__text--small">Beautiful Beasts Album</h1>
-        <h1 class="banner__text">Queen of Yellow x For The Stings</h1>
-      </div>
-       
-        <div class="banner__song">
-          <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1114928860&color=ff5500"></iframe>
+          <div class="banner__text-container">
+            <h1 class="banner__text--small">Beautiful Beasts Album</h1>
+            <h1 class="banner__text">Queen of Yellow x For The Stings</h1>
+          </div>
+
+          <div class="banner__song">
+            <iframe
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1114928860&color=ff5500"
+            ></iframe>
+          </div>
         </div>
       </div>
-</div>
-        <div class="shows">
-          <div class="title shows__title">Shows</div>
-          <div class="shows__display"></div>
-        </div>        
+      <div class="shows">
+        <div class="title shows__title">Shows</div>
+        <div class="shows__display"></div>
+      </div>
     </main>
-      <footer>
-        <div class="footer">
-          <div class="footer__social">
-            <div class="footer__heading">
+    <footer>
+      <div class="footer">
+        <div class="footer__social">
+          <div class="footer__heading">
             <div class="title--white">Get In Touch</div>
-              <div class="footer__icons">
-              <a target="_blank" href="https://www.instagram.com/"><img src="../assets/icons/Icon-IG.svg" alt="instagram"/></a>
-              <a target="_blank" href="https://www.facebook.com/"><img src="../assets/Icons/Icon-facebook.svg" alt="facebook"/></a>
-              <a target="_blank" href="https://www.twitter.com/"><img src="../assets/Icons/Icon-twitter.svg" alt="twitter"/></a>
+            <div class="footer__icons">
+              <a target="_blank" href="https://www.instagram.com/"
+                ><img src="../assets/icons/Icon-IG.svg" alt="instagram"
+              /></a>
+              <a target="_blank" href="https://www.facebook.com/"
+                ><img src="../assets/Icons/Icon-facebook.svg" alt="facebook"
+              /></a>
+              <a target="_blank" href="https://www.twitter.com/"
+                ><img src="../assets/Icons/Icon-twitter.svg" alt="twitter"
+              /></a>
             </div>
           </div>
-            <div class="footer__logo--top"><img src="../assets/Logo/Logo-bandsite.svg"/></div>
+          <div class="footer__logo--top">
+            <img src="../assets/Logo/Logo-bandsite.svg" />
           </div>
-  
-          <div class="footer__contact-list">
-            <div class="footer__contact-item">
-              <div class="footer__contact-info--bold">Cam Adams<br>The Bees Knees Management</div>
-              <div class="footer__contact-info">503 Broadway Penthouse,<br>New York, NY 10012, USA </div>
-              <div class="footer__contact-info">info@thebeesknees.com</div>
-            </div>
-            <div class="footer__contact-item">
-              <div class="footer__contact-info--bold">Pearl Gregg<br>Limitless Artist Group</div>
-              <div class="footer__contact-info">Booking Agent for<br>US / South America / Japan</div>
-              <div class="footer__contact-info">pearl.gregg@limitlessag.com</div>
-            </div>
-            <div class="footer__contact-item">
-              <div class="footer__contact-info--bold">Carson Whyte<br>ARCH Entertainment</div>
-              <div class="footer__contact-info">Booking Agent for<br>UK / EU / AU</div>
-              <div class="footer__contact-info">cwhyte@archentertainment.com</div>
-            </div>
-          </div>
-          <div class="footer__logo"><img src="../assets/Logo/Logo-bandsite.svg"/></div>
-          <div class="footer__trademark">Copyright The Bees Knees © 2021 All Rights Reserved</div>
         </div>
-      </footer>
-</body>
-<script src="../scripts/build-shows-page.js"></script>
+
+        <div class="footer__contact-list">
+          <div class="footer__contact-item">
+            <div class="footer__contact-info--bold">
+              Cam Adams<br />The Bees Knees Management
+            </div>
+            <div class="footer__contact-info">
+              503 Broadway Penthouse,<br />New York, NY 10012, USA
+            </div>
+            <div class="footer__contact-info">info@thebeesknees.com</div>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-info--bold">
+              Pearl Gregg<br />Limitless Artist Group
+            </div>
+            <div class="footer__contact-info">
+              Booking Agent for<br />US / South America / Japan
+            </div>
+            <div class="footer__contact-info">pearl.gregg@limitlessag.com</div>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-info--bold">
+              Carson Whyte<br />ARCH Entertainment
+            </div>
+            <div class="footer__contact-info">
+              Booking Agent for<br />UK / EU / AU
+            </div>
+            <div class="footer__contact-info">cwhyte@archentertainment.com</div>
+          </div>
+        </div>
+        <div class="footer__logo">
+          <img src="../assets/Logo/Logo-bandsite.svg" />
+        </div>
+        <div class="footer__trademark">
+          Copyright The Bees Knees © 2021 All Rights Reserved
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../scripts/build-shows-page.js"></script>
 </html>

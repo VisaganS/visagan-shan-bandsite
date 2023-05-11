@@ -1,104 +1,114 @@
-@use './partials/global' as *;
-@use './partials/variables' as *;
-@use './partials/mixins' as *;
+@use "./partials/global" as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
+.shows {
+  padding: 1rem 0rem;
 
-.shows{
-    padding: 1rem 0rem;
+  @include tablet {
+    padding: 2rem 0;
+  }
 
-    @media screen and (min-width: 768px) {
-        padding:2rem 0;
-      }
-    @media screen and (min-width: 1280px) {
+  @include desktop {
+    display: flex;
+    padding: 2rem 5rem;
+    justify-content: space-around;
+  }
+
+  &__title {
+    padding: 0 1rem;
+
+    @include tablet {
+      padding: 0.5rem 2rem;
+    }
+  }
+  &__display {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      padding: 0 1rem;
+    }
+    @include desktop {
+      padding: 2rem 1rem;
+    }
+  }
+  &__header-top {
+    display: flex;
+    color: $Silver;
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+    display: none;
+    @include tablet {
       display: flex;
-      padding: 2rem 5rem;
-      justify-content: space-around;
-      }  
+      justify-content: space-between;
+      width: 31.25rem;
+      padding: 0 1rem;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    border-bottom: 0.125rem solid $Mercury;
 
-    &__title{
-        padding: 0 1rem;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      width: 46rem;
+    }
 
-        @media screen and (min-width: 768px) {
-            padding:0.5rem 2rem;
-          }
+    &:hover {
+      background-color: $Alabaster;
     }
-    &__display{
-        display:flex;
-        flex-direction: column;
+    &--active {
+      background-color: $Mercury;
+      &:hover {
+        background-color: $Mercury;
+      }
+    }
+  }
+  &__heading {
+    color: $Silver;
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+    @include tablet {
+      display: none;
+    }
+    &--top {
+      width: 8rem;
+    }
+  }
+  &__info {
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
 
-        @media screen and (min-width: 768px) {
-            padding: 0 1rem;
-          }
-        @media screen and (min-width: 1280px) {
-            padding: 2rem 1rem;
-          }  
+    @include tablet {
+      padding-bottom: 0;
+      width: 8rem;
     }
-    &__header-top{
-        display:flex;
-        color: $Silver;
-        font-size: 0.7rem;
-        padding:0.5rem 0;
-        display:none;
-        @media screen and (min-width: 768px) {
-            display:flex;
-            justify-content: space-between;
-            width:31.25rem;
-            padding:0 1rem;
-          }
+    &--bold {
+      @extend .shows__info;
+      font-weight: 600;
     }
-    &__item{
-        display:flex;
-        flex-direction:column;
-        padding: 1rem 1rem;
-        border-bottom: .125rem solid $Mercury;
+  }
+  &__button {
+    background-color: $Bandsite-black;
+    color: white;
+    width: 18rem;
+    height: 2.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
 
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding:1rem;
-            width: 46rem;
-          }
-          &:hover{
-            background-color: $Alabaster;
-          }
+    @include tablet {
+      width: 11rem;
     }
-    &__heading{
-        color: $Silver;
-        font-size: 0.7rem;
-        padding:0.5rem 0;
-        @media screen and (min-width: 768px) {
-            display:none;
-          }
-        &--top{
-            width:8rem;
-        }
-    }
-    &__info{
-        font-size:0.9rem;
-        padding-bottom: 1rem;
-
-        @media screen and (min-width: 768px) {
-            padding-bottom: 0;
-            width: 8rem;
-          }
-        &--bold{
-            @extend .shows__info;
-            font-weight:600;
-        }
-    }
-    &__button{
-        background-color: $Bandsite-black;
-        color:white;
-        width: 18rem;
-        height: 2.5rem;
-        font-weight:600;
-        font-size:1rem;
-        border-radius: .25rem;
-        padding:0.5rem 0;
-
-        @media screen and (min-width: 768px) {
-            width:11rem;
-          }
-    }
+  }
+  &__button:hover {
+    background-color: $Bandsite-DarkBlack;
+  }
 }

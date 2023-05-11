@@ -1,4 +1,6 @@
 /*Check if declaring fonts should be in mixins*/
+@use './variables' as *;
+
 @mixin mobile {
     @media screen and (min-width: $mobile-breakpoint) {
       @content;
