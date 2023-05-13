@@ -1,4 +1,4 @@
-const apiKey = "cede2435-1761-4e6f-ba67-ff0a9296d238";
+const apiKey = "e826d054-2a7d-4dd9-92bb-283ae83ceef5";
 
 function displayComments(){
 axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
