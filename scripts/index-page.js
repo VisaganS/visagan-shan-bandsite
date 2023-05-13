@@ -13,7 +13,6 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     arrComments.sort(function(x, y){
     return y.timestamp - x.timestamp;
 })
-console.log(arrComments);
 
   arrComments.forEach((element) => {
     const formattedDate = new Date(element.timestamp).toLocaleString('en-US', {
@@ -80,7 +79,11 @@ form.addEventListener("submit", (e) => {
     headers: headers
   })
   .then((result) => {
+    console.log(result);
     displayComments();
+  })
+  .catch((error) => {
+    console.error(error);
   })
 });
 
