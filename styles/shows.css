@@ -398,11 +398,11 @@ body ul {
     display: none;
   }
 }
-.footer__logo--top {
+.footer__logotop {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .footer__logo--top {
+  .footer__logotop {
     display: flex;
     width: 20rem;
   }

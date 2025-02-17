@@ -368,13 +368,12 @@ body{
         @media screen and (min-width: 768px) {
             display:none;
         }
-        
-        &--top{
-            display:none;
-            @media screen and (min-width: 768px) {
-                display:flex;
-                width:20rem;
-            }
+    }
+    &__logotop{
+        display:none;
+        @media screen and (min-width: 768px) {
+            display:flex;
+            width:20rem;
         }
     }
     &__im{
