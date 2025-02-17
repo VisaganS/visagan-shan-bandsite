@@ -255,6 +255,7 @@ body{
     &--white{
         @extend .title;
         color:white;
+        width: 100%;
     }
 
     &--white-small{
@@ -307,18 +308,16 @@ body{
 
         @media screen and (min-width: 768px) {
             flex-direction: row;
-            width:70%;
          }
     }
     
     &__icons{
         display:flex;
-        width:35%;
-    justify-content: space-between;
+        width:10rem;
+        justify-content: space-between;
 
     @media screen and (min-width: 768px) {
         align-items: center;
-        width:20%;
         margin: 0 2rem;
      }
     }
@@ -374,11 +373,13 @@ body{
             display:none;
             @media screen and (min-width: 768px) {
                 display:flex;
-               position:relative;
+                width:20rem;
             }
         }
     }
-    &__logo-image{
-        height:1.6rem;
-    }
+    &__image{
+            @media screen and (min-width: 768px) {
+              width: 100%;
+            }
+        }
 }

@@ -281,6 +281,7 @@ body ul {
 }
 .title--white {
   color: white;
+  width: 100%;
 }
 .title--white-small {
   font-size: 1.5rem;
@@ -337,18 +338,16 @@ body ul {
 @media screen and (min-width: 768px) {
   .footer__heading {
     flex-direction: row;
-    width: 70%;
   }
 }
 .footer__icons {
   display: flex;
-  width: 35%;
+  width: 10rem;
   justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   .footer__icons {
     align-items: center;
-    width: 20%;
     margin: 0 2rem;
   }
 }
@@ -405,11 +404,13 @@ body ul {
 @media screen and (min-width: 768px) {
   .footer__logo--top {
     display: flex;
-    position: relative;
+    width: 20rem;
   }
 }
-.footer__logo-image {
-  height: 1.6rem;
+@media screen and (min-width: 768px) {
+  .footer__image {
+    width: 100%;
+  }
 }
 
 .about {
